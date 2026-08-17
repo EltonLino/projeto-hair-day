@@ -1,4 +1,7 @@
 {
+  "name": "hairday",
+  "description": "Aplicação web para agendamento para corte de cabelo.",
+  "author": "Elton",
   "scripts": {
     "server":"json-server --watch server.json --port 3333"
   },
