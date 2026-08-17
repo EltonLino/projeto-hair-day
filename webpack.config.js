@@ -1,6 +1,8 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
+const { execFile } = require("child_process")
+const { LoaderOptionsPlugin } = require("webpack")
 
 module.exports = {
     target: "web",
@@ -41,6 +43,17 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"],
+                    }
+                }
+
             }
         ]
     }
