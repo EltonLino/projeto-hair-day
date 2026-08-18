@@ -25,6 +25,23 @@ opening.forEach(({hour, available}) => {
     li.classList.add(available ? "hour-available" : "hour-unavailable")
 
     li.textContent = hour
+
+    if (hour === "09:00"){
+        hourHaderAdd("Manhã")
+    } else if (hour === "13:00"){
+        hourHaderAdd("Tarde")
+    } else if (hour === "18:00"){
+        hourHaderAdd("Noite")
+    }
+    
     hours.append(li)
 })
+}
+
+function hourHaderAdd(title){
+    const header = document.createElement("li")
+    header.classList.add("hour-period")
+    header.textContent = title
+
+    hours.append(header)
 }
