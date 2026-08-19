@@ -1,9 +1,3 @@
 {
-  "schedules": [
-    {
-      "id": "1787129090191",
-      "name": "Elton Lino",
-      "when": "2026-08-19T13:00:00.000Z"
-    }
-  ]
+  "schedules": []
 }
